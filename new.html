@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Style Header</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+
+.pagination-breadcrumb {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination-breadcrumb li {
+  margin-right: 10px;
+  position: relative;
+}
+
+.pagination-breadcrumb li:after {
+  content: "›";
+  position: absolute;
+  right: -12px;
+}
+
+.pagination-breadcrumb li:last-child:after {
+  content: none;
+}
+
+.pagination-breadcrumb .step-number {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background: #ddd;
+  margin-right: 5px;
+}
+
+.pagination-breadcrumb .completed .step-number {
+  background: #4CAF50;
+  color: white;
+}
+
+.pagination-breadcrumb .current .step-number {
+  background: #2196F3;
+  color: white;
+  font-weight: bold;
+} 
+
+.hero-section {
+            background-color: #f8f9fa; /* Light gray background */
+            padding: 60px 0;
+        }
+        .hero-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .hero-btn {
+            padding: 10px 20px;
+            font-size: 1.2rem;
+        }
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+        }
+    
+        /* Combined header styles */
+        .main-header {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* Header top section */
+        .header-top-row {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            flex-wrap: wrap;
+        }
+        
+        /* Logo section */
+        .logo-section {
+            display: flex;
+            align-items: center;
+            margin-right: auto;
+        }
+        
+        .logo-img {
+            height: 36px;
+            margin-right: 10px;
+        }
+        
+        /* Search bar */
+        .search-box-container {
+            position: relative;
+            flex-grow: 1;
+            min-width: 120px; /* Ensure search has minimum width */
+            margin: 0 10px;
+            order: 3; /* Moves search to third position on mobile */
+            width: 100%; /* Full width on mobile */
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6c757d;
+        }
+        
+        .search-input {
+            padding-left: 38px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            width: 100%;
+        }
+        
+        /* Auth buttons */
+        .auth-section {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            order: 2; /* Moves auth to second position on mobile */
+        }
+        
+        .auth-section .btn {
+            white-space: nowrap; /* Prevent button text wrapping */
+        }
+        
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            border: none;
+            background: none;
+            padding: 8px;
+            order: 4; /* Moves toggle to fourth position */
+            margin-left: 10px;
+        }
+        
+        /* Centered navigation */
+        .main-navigation {
+            background: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .nav-item {
+            position: relative;
+            margin: 0 12px;
+        }
+        
+        .nav-link {
+            padding: 12px 8px;
+            color: #333;
+            font-weight: 500;
+            text-decoration: none;
+            display: block;
+        }
+        
+        /* Hover effects */
+        .nav-link:hover {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #0066cc;
+        }
+        
+        /* Dropdown styles */
+        .dropdown-menu {
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+        
+        .dropdown-item {
+            padding: 8px 16px;
+        }
+        
+        .dropdown-item:hover {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        
+        .dropdown-divider {
+            margin: 4px 0;
+        }
+        
+        /* Mobile styles */
+        @media (max-width: 991.98px) {
+            .header-top-row {
+                gap: 10px; /* Adds consistent spacing between items */
+            }
+            
+            .logo-section {
+                order: 1;
+                flex: 0 0 auto;
+            }
+            
+            .search-box-container {
+                order: 2;
+                margin: 0;
+                flex: 1 1 auto;
+                min-width: 0; /* Allows search to shrink */
+            }
+            
+            .auth-section {
+                order: 3;
+                margin-left: auto; /* Pushes auth to the left of toggle */
+            }
+            
+            .mobile-menu-toggle {
+                order: 4;
+            }
+            
+            .main-navigation {
+                display: none;
+            }
+            
+            .mobile-nav-container {
+                width: 100%;
+            }
+            
+            .mobile-nav-menu {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            .mobile-nav-item {
+                padding: 10px 15px;
+                border-bottom: 1px solid #eee;
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .auth-section.mobile {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: none;
+            }
+            
+            .search-box-container {
+                max-width: 500px;
+                margin: 0 20px;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero-section {
+            background-color: #4a6bff;
+            color: white;
+            padding: 3rem 0;
+            margin-bottom: 2rem;
+        }
+        .card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            border: none;
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .feature-list li:before {
+            content: "•";
+            color: #4a6bff;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        hr {
+            border-top: 2px solid #4a6bff;
+            opacity: 0.2;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Header Container -->
+    <header class="main-header">
+        <div class="container">
+            <!-- Top Header Row -->
+            <div class="header-top-row">
+                <!-- Logo -->
+                <div class="logo-section">
+                    <img src="https://via.placeholder.com/40" alt="Site Logo" class="logo-img">
+                    <h1 class="h5 mb-0 d-none d-sm-inline">EduSite</h1>
+                </div>
+                
+                <!-- Search Box -->
+                <div class="search-box-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="search" class="form-control search-input" placeholder="Search...">
+                </div>
+                
+                <!-- Auth Buttons - Visible on mobile and desktop -->
+                <div class="auth-section">
+                    <a href="#" class="btn btn-link text-decoration-none">Log In</a>
+                    <a href="#" class="btn btn-primary d-none d-sm-inline-block">Sign Up</a>
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavMenu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <!-- Main Navigation - Desktop -->
+            <nav class="main-navigation d-none d-lg-block">
+                <div class="container">
+                    <div class="nav-container">
+                        <ul class="nav-menu">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="subjectsDropdown" data-bs-toggle="dropdown">
+                                    Subjects ▼
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Math</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">English</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Reading</a></li>
+                                            <li><a class="dropdown-item" href="#">Writing</a></li>
+                                            <li><a class="dropdown-item" href="#">Grammar</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Science</a></li>
+                                    <li><a class="dropdown-item" href="#">Social Studies</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="gradesDropdown" data-bs-toggle="dropdown">
+                                    Grades
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Pre-K</a></li>
+                                    <li><a class="dropdown-item" href="#">Kindergarten</a></li>
+                                    <li><a class="dropdown-item" href="#">1st Grade</a></li>
+                                    <li><a class="dropdown-item" href="#">2nd Grade</a></li>
+                                </ul>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Worksheets</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Games</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Activities</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Mobile Navigation Menu -->
+            <div class="collapse mobile-nav-container d-lg-none" id="mobileNavMenu">
+                <ul class="mobile-nav-menu">
+                    <li class="mobile-nav-item dropdown">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#mobileSubjects">
+                            Subjects <i class="fas fa-chevron-down float-end"></i>
+                        </a>
+                        <div class="collapse" id="mobileSubjects">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="#">Math</a></li>
+                                <li class="list-group-item"><a href="#">English</a></li>
+                                <li class="list-group-item"><a href="#">Science</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="mobile-nav-item dropdown">
+                        <a class="nav-link" data-bs-toggle="collapse" href="#mobileGrades">
+                            Grades <i class="fas fa-chevron-down float-end"></i>
+                        </a>
+                        <div class="collapse" id="mobileGrades">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><a href="#">Pre-K</a></li>
+                                <li class="list-group-item"><a href="#">Kindergarten</a></li>
+                                <li class="list-group-item"><a href="#">1st Grade</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a class="nav-link" href="#">Worksheets</a>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a class="nav-link" href="#">Games</a>
+                    </li>
+                    
+                    <li class="mobile-nav-item">
+                        <a class="nav-link" href="#">Activities</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <nav aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/page1">Page 1</a></li>
+          <li class="breadcrumb-item"><a href="/page2">Page 2</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Page 3</li>
+        </ol>
+      </nav>
+      <nav aria-label="Progress steps">
+        <ol class="pagination-breadcrumb">
+          <li class="completed"><a href="/step1"><span class="step-number">1</span> Step One</a></li>
+          <li class="completed"><a href="/step2"><span class="step-number">2</span> Step Two</a></li>
+          <li class="current"><span class="step-number">3</span> Current Step</li>
+          <li><span class="step-number">4</span> Next Step</li>
+          <li><span class="step-number">5</span> Final Step</li>
+        </ol>
+      </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Unlock every student's true potential</h1>
+            <p class="lead">A premium membership gives you unlimited access to all of Education.com's resources and tools like playlists of guided lessons, progress insights for each student, and more!</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Guided Lessons Card -->
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card">
+                    <img src="/image/d.png" class="card-img-top" alt="Guided Lessons">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Guided lessons</h2>
+                        <p class="card-text">Follow our expertly-designed pathways of fun games that help learners practice and build upon skills in math, reading, writing, and typing!</p>
+                        
+                        <hr>
+                        
+                        <div class="graphic-section">
+                            <h3 class="h6">Graphic</h3>
+                            <ul class="feature-list">
+                                <li><strong>Small Group Assignment 4</strong></li>
+                                <li><strong>Advanced Training</strong></li>
+                                <li><strong>Advanced Training</strong></li>
+                                <li><strong>Advanced Training</strong></li>
+                                <li><strong>Advanced Training</strong></li>
+                                <li><strong>Advanced Training</strong></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Individual Learners Card -->
+            <div class="col-lg-6">
+                <div class="card">
+                    <img src="/image/d.png" class="card-img-top" alt="Individual Learners">
+                    <div class="card-body">
+                        <h2 class="card-title h4">Support for individual learners</h2>
+                        <p class="card-text">Create assignments for individual learners, an entire household, or a classroom-with insights to celebrate each student's achievements and milestones</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<div class="container">
+    <div class="hero-section d-flex align-items-center">
+        <div class="row">
+            <!-- Text Content -->
+            <div class="col-md-6 d-flex align-items-center">
+                <div class="hero-content">
+                    <h1 class="display-4">Discover a limitless world of learning</h1>
+                    <p class="lead">Review concepts and explore new topics with worksheets, hands-on activities, puzzles, games, and more–the options are endless! Access our library of 37,000+ resources today.</p>
+                    <a href="#" class="btn btn-primary btn-lg">Join for free</a>
+                </div>
+            </div>
+            <!-- Image Content -->
+            <div class="col-md-6">
+                <img src="/image/d.png" alt="Hero Image" class="hero-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+        // Sample data
+const pages = [
+  { title: "Home", url: "/" },
+  { title: "Products", url: "/products" },
+  { title: "Category", url: "/products/category" },
+  { title: "Current Page", url: null }
+];
+
+function generateBreadcrumbs() {
+  const container = document.querySelector('.breadcrumb-container');
+  const ol = document.createElement('ol');
+  ol.className = 'breadcrumb';
+  
+  pages.forEach((page, index) => {
+    const li = document.createElement('li');
+    li.className = 'breadcrumb-item';
+    if (index === pages.length - 1) {
+      li.classList.add('active');
+      li.setAttribute('aria-current', 'page');
+      li.textContent = page.title;
+    } else {
+      const a = document.createElement('a');
+      a.href = page.url;
+      a.textContent = page.title;
+      li.appendChild(a);
+    }
+    ol.appendChild(li);
+  });
+  
+  container.appendChild(ol);
+}
+
+// Call on page load
+generateBreadcrumbs();
+
+@media (max-width: 768px) {
+  .breadcrumb li:not(:first-child):not(:last-child):not(.current) {
+    display: none;
+  }
+  .breadcrumb li:not(:first-child):not(:last-child).current {
+    display: list-item;
+  }
+  .breadcrumb li:first-child:after {
+    content: "›";
+  }
+}
+        // Initialize dropdown submenus for desktop
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle desktop dropdown hover
+            const desktopDropdowns = document.querySelectorAll('.nav-item.dropdown');
+            
+            desktopDropdowns.forEach(function(item) {
+                item.addEventListener('mouseenter', function() {
+                    this.querySelector('.dropdown-menu').style.display = 'block';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.querySelector('.dropdown-menu').style.display = 'none';
+                });
+            });
+            
+            // Handle mobile menu toggling
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileNavMenu = document.getElementById('mobileNavMenu');
+            
+            mobileMenuToggle.addEventListener('click', function() {
+                const isExpanded = mobileNavMenu.classList.contains('show');
+                this.setAttribute('aria-expanded', !isExpanded);
+                this.innerHTML = isExpanded ? '<i class="fas fa-bars"></i>' : '<i class="fas fa-times"></i>';
+            });
+        });
+    </script>
+</body>
+</html>

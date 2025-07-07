@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education.com Clone</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="Education.com" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="worksheetsDropdown" role="button" data-bs-toggle="dropdown">
+                            Worksheets
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Math</a></li>
+                            <li><a class="dropdown-item" href="#">Reading</a></li>
+                            <li><a class="dropdown-item" href="#">Science</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gamesDropdown" role="button" data-bs-toggle="dropdown">
+                            Games
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Math Games</a></li>
+                            <li><a class="dropdown-item" href="#">Reading Games</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Lesson Plans</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav aria-label="Breadcrumb navigation">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/page1">Page 1</a></li>
+          <li class="breadcrumb-item"><a href="/page2">Page 2</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Page 3</li>
+        </ol>
+      </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section bg-light py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1 class="display-4 fw-bold mb-4">Your complete learning resource</h1>
+                    <p class="lead mb-4">Access thousands of resources to help your child learn</p>
+                    <button class="btn btn-primary btn-lg me-2">Get Started</button>
+                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/hero-image.png" alt="Learning Resources" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Why Education.com?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-book-open fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">30,000+ Worksheets</h4>
+                            <p class="card-text">Printable worksheets for all subjects and grade levels.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-gamepad fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">1,500+ Games</h4>
+                            <p class="card-text">Interactive games that make learning fun.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <i class="fas fa-chalkboard-teacher fa-3x text-primary mb-3"></i>
+                            <h4 class="card-title">Lesson Plans</h4>
+                            <p class="card-text">Comprehensive plans for teachers and homeschoolers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Resources -->
+    <section class="popular-resources py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Popular Resources</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/math-worksheet.jpg" class="card-img-top" alt="Math Worksheet">
+                        <div class="card-body">
+                            <h5 class="card-title">Math Worksheets</h5>
+                            <p class="card-text">Addition, subtraction, multiplication and more.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/reading-worksheet.jpg" class="card-img-top" alt="Reading Worksheet">
+                        <div class="card-body">
+                            <h5 class="card-title">Reading Worksheets</h5>
+                            <p class="card-text">Phonics, comprehension and vocabulary.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/science-activity.jpg" class="card-img-top" alt="Science Activity">
+                        <div class="card-body">
+                            <h5 class="card-title">Science Activities</h5>
+                            <p class="card-text">Hands-on experiments and projects.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="card h-100">
+                        <img src="images/craft-idea.jpg" class="card-img-top" alt="Craft Idea">
+                        <div class="card-body">
+                            <h5 class="card-title">Craft Ideas</h5>
+                            <p class="card-text">Creative projects for all ages.</p>
+                            <a href="#" class="btn btn-sm btn-outline-primary">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">What Parents Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"My daughter loves the games and I love that she's learning while having fun!"</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/user1.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Sarah J.</h6>
+                                    <small class="text-muted">Parent</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="card-text mb-4">"The worksheets have been a lifesaver for homeschooling my two kids."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/user2.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Michael T.</h6>
+                                    <small class="text-muted">Homeschool Parent</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="mb-3 text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p class="card-text mb-4">"As a teacher, I find the lesson plans and activities extremely helpful."</p>
+                            <div class="d-flex align-items-center">
+                                <img src="images/user3.jpg" class="rounded-circle me-3" width="50" alt="User">
+                                <div>
+                                    <h6 class="mb-0">Emily R.</h6>
+                                    <small class="text-muted">Elementary Teacher</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 bg-primary text-white">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to get started?</h2>
+            <p class="lead mb-4">Join millions of parents and teachers using Education.com</p>
+            <button class="btn btn-light btn-lg px-4 me-2">Sign Up Free</button>
+            <button class="btn btn-outline-light btn-lg px-4">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <h5>Education.com</h5>
+                    <p>Providing educational resources for parents, teachers, and homeschoolers since 2006.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Resources</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Worksheets</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Games</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Activities</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Lesson Plans</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contact Us</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <h5>Connect</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-2"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                    <div class="mt-3">
+                        <p>Subscribe to our newsletter</p>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2023 Education.com Clone. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white text-decoration-none me-3">Terms of Service</a>
+                    <a href="#" class="text-white text-decoration-none">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <p>Don't have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signupConfirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Sign Up</button>
+                    </form>
+                    <hr>
+                    <div class="text-center">
+                        <p>Already have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>

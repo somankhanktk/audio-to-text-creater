@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Educational Resources</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+        <!-- Header (left-aligned) -->
+    <header class="container py-3">
+        <div class="d-flex align-items-center">
+            <!-- Logo and Name -->
+            <div class="d-flex align-items-center me-3">
+            <h1 class="h5 mb-0" style="color: rgb(17, 180, 209);">education.com</h1>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container flex-grow-1 me-3">
+                <i class="fas fa-search search-icon"></i>
+                <input type="search" class="form-control" placeholder="Search...">
+            </div>
+            
+            <!-- Login/Signup Buttons -->
+            <div class="d-flex">
+                <button class="btn btn-outline-primary me-2" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: rgb(14, 116, 134);background-color: rgb(255, 255, 255);border-color: rgb(255, 255, 255);">Login</button>
+                <button class="btn btn-primary" style="border-radius: 20px;" data-bs-toggle="modal" data-bs-target="#signupModal">Sign Up</button>
+        </div>
+    </header>
+       <!-- Login Modal -->
+       <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="loginEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label" for="rememberMe">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                    <div class="text-center mt-3">
+                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                    </div>
+                    <hr>
+                    <div class="text-center">
+                        <p>Don't have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Sign up</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade "  id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Create Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="signupForm">
+                        <div class="mb-3">
+                            <label for="signupName" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="signupName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="signupEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupPassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="signupPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="signupConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="signupConfirmPassword" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                            <label class="form-check-label" for="agreeTerms">I agree to the <a href="#" class="text-decoration-none">Terms of Service</a> and <a href="#" class="text-decoration-none">Privacy Policy</a></label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100" >Sign Up</button>
+                    </form>
+                    <hr>
+                    <div class="text-center">
+                        <p>Already have an account? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#loginModal" data-bs-dismiss="modal">Log in</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Centered Navigation Bar -->
+    <div class="navbar navbar-expand-lg navbar-light bg-white navbar-centered">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCentered">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarCentered">
+                <ul class="navbar-nav">
+                    <!-- Subjects Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="subjectsDropdown" role="button" data-bs-toggle="dropdown">
+                            Subjects 
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="math.html">Math</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">English Language Arts</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Alphabet</a></li>
+                                    <li><a class="dropdown-item" href="#">Phonics</a></li>
+                                    <li><a class="dropdown-item" href="#">Reading</a></li>
+                                    <li><a class="dropdown-item" href="#">Writing</a></li>
+                                    <li><a class="dropdown-item" href="#">Grammar</a></li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Science</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Physical Science</a></li>
+                                    <li><a class="dropdown-item" href="#">Life Science</a></li>
+                                    <li><a class="dropdown-item" href="#">Earth Science</a></li>
+                                    <li><a class="dropdown-item" href="#">Engineering</a></li>
+                                    <li><a class="dropdown-item" href="#">Computer Science</a></li>
+                                </ul>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Social Studies</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">History</a></li>
+                                    <li><a class="dropdown-item" href="#">Geography</a></li>
+                                    <li><a class="dropdown-item" href="#">Civics</a></li>
+                                    <li><a class="dropdown-item" href="#">Economics</a></li>
+                                    <li><a class="dropdown-item" href="#">Culture</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Grades Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="gradesDropdown" role="button" data-bs-toggle="dropdown">
+                            Grades
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Pre-K</a></li>
+                            <li><a class="dropdown-item" href="#">Kindergarten</a></li>
+                            <li><a class="dropdown-item" href="#">1st Grade</a></li>
+                            <li><a class="dropdown-item" href="#">2nd Grade</a></li>
+                            <li><a class="dropdown-item" href="#">3rd Grade</a></li>
+                        </ul>
+                    </li>
+
+                          <!-- worksheets -->
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="gradesDropdown" role="button" data-bs-toggle="dropdown">
+                                worksheets
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Pre-K</a></li>
+                                <li><a class="dropdown-item" href="#">Kindergarten</a></li>
+                                <li><a class="dropdown-item" href="#">1st Grade</a></li>
+                                <li><a class="dropdown-item" href="#">2nd Grade</a></li>
+                                <li><a class="dropdown-item" href="#">3rd Grade</a></li>
+                            </ul>
+                        </li>
+                                              <!-- gamess -->
+                                              <li class="nav-item dropdown">
+                                                <a class="nav-link dropdown-toggle" href="#" id="gradesDropdown" role="button" data-bs-toggle="dropdown">
+                                                    games
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#">Pre-K</a></li>
+                                                    <li><a class="dropdown-item" href="#">Kindergarten</a></li>
+                                                    <li><a class="dropdown-item" href="#">1st Grade</a></li>
+                                                    <li><a class="dropdown-item" href="#">2nd Grade</a></li>
+                                                    <li><a class="dropdown-item" href="#">3rd Grade</a></li>
+                                                </ul>
+                                            </li>
+                    <!-- Additional Nav Items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Activities</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex align-items-center mb-3">
+            <img src="https://cdn.education.com/files/static/content/breadcrumbs_icon.svg" alt="" height="30" width="30">
+            <nav class="ms-2">
+                <a href="/resources/" class="text-decoration-none">All Subjects</a> &raquo;
+                <a href="a.html" class="text-decoration-none">Math</a>&raquo;
+                <a href="a.html" class="text-decoration-none">addition</a>
+            </nav>
+        </div>
+
+        <div class="accordion" id="categoryTree">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#mathCategories">
+                        Math Categories
+                    </button>
+                </h2>
+                <div id="mathCategories" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        <div class="row row-cols-2 row-cols-md-4 g-3">
+                            <div class="col"><a href="/resources/math/addition/" class="btn btn-outline-primary w-100">Addition</a></div>
+                            <div class="col"><a href="/resources/math/subtraction/" class="btn btn-outline-primary w-100">Subtraction</a></div>
+                            <div class="col"><a href="/resources/math/multiplication/" class="btn btn-outline-primary w-100">Multiplication</a></div>
+                            <div class="col"><a href="/resources/math/division/" class="btn btn-outline-primary w-100">Division</a></div>
+                            <div class="col"><a href="/resources/math/numbers-counting/" class="btn btn-outline-primary w-100">Numbers and Counting</a></div>
+                            <div class="col"><a href="/resources/math/patterns/" class="btn btn-outline-primary w-100">Patterns</a></div>
+                            <div class="col"><a href="/resources/math/place-value/" class="btn btn-outline-primary w-100">Place Value</a></div>
+                            <div class="col"><a href="/resources/math/mixed-operations/" class="btn btn-outline-primary w-100">Mixed Operations</a></div>
+                            <div class="col"><a href="/resources/math/fractions/" class="btn btn-outline-primary w-100">Fractions</a></div>
+                            <div class="col"><a href="/resources/math/decimals/" class="btn btn-outline-primary w-100">Decimals</a></div>
+                            <div class="col"><a href="/resources/math/geometry/" class="btn btn-outline-primary w-100">Geometry</a></div>
+                            <div class="col"><a href="/resources/math/algebra/" class="btn btn-outline-primary w-100">Algebra</a></div>
+                        </div>
+                        <button class="btn btn-link mt-3" data-bs-toggle="collapse" data-bs-target="#mathCategories">Show Less</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container-fluid">
+        <!-- Page content will go here -->
+        <div class="row mt-3">
+            <!-- Category Breadcrumb -->
+            <div class="col-md-12">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb category-breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">All Subjects</a></li>
+                        <li class="breadcrumb-item "><a href="test.html">Math</a></li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="row">
+            <!-- Filters Sidebar -->
+            <div class="col-md-3">
+                <div class="card filter-section">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Filters</h5>
+                        <button class="btn btn-sm btn-outline-secondary">Clear All</button>
+                    </div>
+                    <div class="card-body">
+                        <!-- Subjects Filter -->
+                        <div class="mb-4">
+                            <button class="btn btn-link text-start w-100 d-flex justify-content-between align-items-center" 
+                                    data-bs-toggle="collapse" data-bs-target="#subjectsCollapse">
+                                <span>Subjects</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="collapse show" id="subjectsCollapse">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center active">
+                                        Math
+                                        <i class="fas fa-times"></i>
+                                    </li>
+                                    <li class="list-group-item">English Language Arts</li>
+                                    <li class="list-group-item">Science</li>
+                                    <li class="list-group-item">Social Studies</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Grade Level Filter -->
+                        <div class="mb-4">
+                            <h6>Grade Level</h6>
+                            <div class="d-flex flex-wrap">
+                                <a href="#" class="btn btn-outline-primary btn-sm m-1">Pre-K</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm m-1">K</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm m-1">1st</a>
+                                <a href="#" class="btn btn-outline-primary btn-sm m-1">2nd</a>
+                                <!-- More grade levels... -->
+                            </div>
+                        </div>
+                        
+                        <!-- Resource Type Filter -->
+                        <div class="mb-4">
+                            <button class="btn btn-link text-start w-100 d-flex justify-content-between align-items-center" 
+                                    data-bs-toggle="collapse" data-bs-target="#resourceTypeCollapse">
+                                <span>Resource Type</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <div class="collapse show" id="resourceTypeCollapse">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Worksheets</li>
+                                    <li class="list-group-item">Games</li>
+                                    <li class="list-group-item">Lesson Plans</li>
+                                    <!-- More resource types... -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h1>Math Educational Resources</h1>
+                    <div class="dropdown">
+                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="sortDropdown" data-bs-toggle="dropdown">
+                            Sort by: Featured
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Featured</a></li>
+                            <li><a class="dropdown-item" href="#">Most popular</a></li>
+                            <li><a class="dropdown-item" href="#">Most recent</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <!-- Resource cards will go here -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!-- Resource Card Example -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card h-100">
+                    <img src="https://cdn.education.com/worksheet-image/733971/2-minute-multiplication-2023-01-25.gif" 
+                         class="card-img-top resource-img" alt="Two-Minute Multiplication">
+                    <div class="card-body">
+                        <h5 class="card-title">Two-Minute Multiplication</h5>
+                        <div class="d-flex mb-2">
+                            <span class="badge bg-light text-dark me-2">Third Grade</span>
+                            <span class="badge bg-light text-dark">Multiplication</span>
+                        </div>
+                        <p class="card-text">Learners will test their multiplication speed and accuracy as they solve 48 one- and two-digit multiplication problems.</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-purple text-white">Interactive Worksheet</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="resource1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Second Resource Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card h-100">
+                    <img src="https://cdn.education.com/worksheet-image/3842272/evaluate-expressions-order-operations-1-2023-09-22.gif" 
+                         class="card-img-top resource-img" alt="Evaluate Expressions Using Order of Operations #1">
+                    <div class="card-body">
+                        <h5 class="card-title">Evaluate Expressions Using Order of Operations #1</h5>
+                        <div class="d-flex mb-2">
+                            <span class="badge bg-light text-dark me-2">Fifth Grade</span>
+                            <span class="badge bg-light text-dark">Mixed Operations</span>
+                        </div>
+                        <p class="card-text">Get practice evaluating expressions using the order of operations with this mixed operations math worksheet!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-purple text-white">Interactive Worksheet</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="resource2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Third Resource Card -->
+            <div class="col-md-4 mb-4">
+                <div class="card resource-card h-100">
+                    <img src="https://cdn.education.com/worksheet-image/2883002/ratio-tables-2023-01-25.gif" 
+                         class="card-img-top resource-img" alt="Ratio Tables">
+                    <div class="card-body">
+                        <h5 class="card-title">Ratio Tables</h5>
+                        <div class="d-flex mb-2">
+                            <span class="badge bg-light text-dark me-2">Sixth Grade</span>
+                            <span class="badge bg-light text-dark">Ratios and Proportions</span>
+                        </div>
+                        <p class="card-text">Students apply their knowledge of ratios and rates to real-world problems with this math worksheet!</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="badge bg-purple text-white">Interactive Worksheet</span>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="resource3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                <li class="page-item disabled"><span class="page-link">...</span></li>
+                <li class="page-item"><a class="page-link" href="#">300</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3>Math Educational Resources</h3>
+                <p>Math deals with the logic of shape, quantity and arrangement. It is the building block for everything in our daily lives, from money, art, science, engineering and technology. A true understanding of math will give students the ability to think, perceive and analyze numerical problems, from the most simple to the most complex.</p>
+                
+                <h3 class="mt-4">Math 101</h3>
+                <p><strong>Make it fun.</strong> Math is all about solving problems. This requires mastering skills such as grouping, classifying, counting, and recognizing numerals, shapes and patterns.</p>
+                <p><strong>Turn your house a math classroom.</strong> Let your kids help out with cooking, where they'll learn how to measure ingredients.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
